@@ -30,6 +30,8 @@
         "timer4", 
         "pwm0", 
         "pdm", 
+        "nvmc", 
+        "ppi", 
         "mwu", 
         "pwm1", 
         "pwm2", 

@@ -1,26 +1,22 @@
-/* This file is used for documentation purposes. It does not need
-to be compiled. All source code is in the common area.
-If there is any device specific code required it can be included here,
-in which case this file must be added to the compile list. */
+/** @defgroup clock_defines Clock Control Defines
 
-/** @defgroup gpio_file GPIO
+@brief <b>Defined Constants and Types for the NRF51xx Clock Control</b>
 
-@ingroup NRF51xx
-
-@brief <b>libopencm3 NRF51xx General Purpose I/O</b>
+@ingroup NRF51xx_defines
 
 @version 1.0.0
 
 @date 4 January 2019
 
-LGPL License Terms @ref lgpl_license
-*/
+@author @htmlonly &copy; @endhtmlonly 2019 
+Gerrit Maus <funk@maus.xyz>, Luong Le <novercy@live.com>
 
+LGPL License Terms @ref lgpl_license
+ */
 /*
  * This file is part of the libopencm3 project.
  *
- * Copyright (C) 2019 Gerrit Maus <funk@maus.xyz>
- * Copyright (C) 2019 Luong Le <novercy@live.com>
+ * Copyright (C) 2019 Gerrit Maus <funk@maus.xyz>, Luong Le <novercy@live.com>
  *
  * This library is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -36,5 +32,12 @@ LGPL License Terms @ref lgpl_license
  * along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <libopencm3/nrf5/gpio.h>
+#ifndef LIBOPENCM3_CLOCK_H
+#define LIBOPENCM3_CLOCK_H
 
+#include <libopencm3/nrf5/common/clock_common.h>
+
+/** Registers */
+#define CLOCK_XTALFREQ                          MMIO32(CLOCK_BASE + 0x550)
+
+#endif

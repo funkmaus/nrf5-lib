@@ -36,9 +36,9 @@ TGT_CFLAGS	+= $(STANDARD_FLAGS)
 
 ARFLAGS		= rcs
 
-OBJS		= gpio.o \
+OBJS		= gpio.o clock.o radio.o\
 
-OBJS            += gpio_common.o \
+OBJS            += gpio_common.o clock_common.o radio_common.o \
 
 VPATH += ../../usb:../:../../cm3:../common
 

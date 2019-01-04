@@ -22,6 +22,8 @@
 
 #if defined(NRF52)
 #       include <libopencm3/nrf5/2/clock.h>
+#elif defined(NRF51)
+#       include <libopencm3/nrf5/1/clock.h>
 #else
 #       error "nrf family not defined."
 #endif

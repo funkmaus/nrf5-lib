@@ -20,6 +20,8 @@
 
 #if defined(NRF52)
 #	include <libopencm3/nrf5/2/memorymap.h>
+#elif defined(NRF51)
+#	include <libopencm3/nrf5/1/memorymap.h>
 #else
 #	error "nrf family not defined."
 #endif

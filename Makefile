@@ -27,7 +27,7 @@ space:=
 space+=
 SRCLIBDIR:= $(subst $(space),\$(space),$(realpath lib))
 
-TARGETS ?= nrf5/2
+TARGETS ?= nrf5/2 nrf5/1
 
 # Be silent per default, but 'make V=1' will show all compiler calls.
 ifneq ($(V),1)

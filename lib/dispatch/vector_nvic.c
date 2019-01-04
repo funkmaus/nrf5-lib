@@ -66,6 +66,8 @@
 #elif defined(MSP432E4)
 #       include "../msp432/e4/vector_nvic.c"
 
+#elif defined(NRF51)
+#	include "../nrf5/1/vector_nvic.c"
 #elif defined(NRF52)
 #	include "../nrf5/2/vector_nvic.c"
 

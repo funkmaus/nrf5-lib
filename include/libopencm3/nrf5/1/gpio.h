@@ -1,7 +1,23 @@
-/* This provides unification of code over NRF5x subfamilies */
+/** @defgroup gpio_defines GPIO Defines
+
+@brief <b>Defined Constants and Types for the NRF51xx General Purpose I/O</b>
+
+@ingroup NRF51xx_defines
+
+@version 1.0.0
+
+@date 4 January 2019
+
+@author @htmlonly &copy; @endhtmlonly 2019 
+Gerrit Maus <funk@maus.xyz>, Luong Le <novercy@live.com>
+
+LGPL License Terms @ref lgpl_license
+ */
 
 /*
  * This file is part of the libopencm3 project.
+ *
+ * Copyright (C) 2019 Gerrit Maus <funk@maus.xyz>, Luong Le <novercy@live.com>
  *
  * This library is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -17,14 +33,9 @@
  * along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <libopencm3/cm3/common.h>
-#include <libopencm3/nrf5/memorymap.h>
+#ifndef LIBOPENCM3_GPIO_H
+#define LIBOPENCM3_GPIO_H
 
-#if defined(NRF52)
-#       include <libopencm3/nrf5/2/gpio.h>
-#elif defined(NRF51)
-#       include <libopencm3/nrf5/1/gpio.h>
-#else
-#       error "nrf family not defined."
+#include <libopencm3/nrf5/common/gpio_common.h>
+
 #endif
-

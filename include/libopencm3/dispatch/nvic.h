@@ -70,6 +70,8 @@
 #elif defined(VF6XX)
 #	include <libopencm3/vf6xx/nvic.h>
 
+#elif defined(NRF51)
+#	include <libopencm3/nrf5/1/nvic.h>
 #elif defined(NRF52)
 #	include <libopencm3/nrf5/2/nvic.h>
 

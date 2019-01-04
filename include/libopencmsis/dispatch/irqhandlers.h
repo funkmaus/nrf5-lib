@@ -54,6 +54,8 @@
 /* Yes, we use the same interrupt table for both LM3S and LM4F */
 #	include <libopencmsis/lm3s/irqhandlers.h>
 
+#elif defined(NRF51)
+#       include <libopencmsis/nrf5/1/irqhandlers.h>
 #elif defined(NRF52)
 #       include <libopencmsis/nrf5/2/irqhandlers.h>
 

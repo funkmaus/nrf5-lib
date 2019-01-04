@@ -844,7 +844,7 @@ Disconnect. Eg. S0S1 is Standard '0', standard '1' */
 #define DRIVE_D0S1                             (4)
 #define DRIVE_D0H1                             (5)
 #define DRIVE_S0D1                             (6)
-#define DRIVE_D0D1                             (7)
+#define DRIVE_H0D1                             (7)
 #define GPIO_PIN_CNF_DRIVE(n)                  (((n)&0x07) << 8)
 #define GPIO_PIN_CNF_DRIVE_S0S1                (0 << 8)
 #define GPIO_PIN_CNF_DRIVE_H0S1                (1 << 8)

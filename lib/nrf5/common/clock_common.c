@@ -1,29 +1,8 @@
 /** @addtogroup clock_file
-
 @author @htmlonly &copy; @endhtmlonly 2018 
-Gerrit Maus <funk@maus.xyz>
-Luong Le <novercy@live.com>
-
+Gerrit Maus <funk@maus.xyz>, Luong Le <novercy@live.com>
+This library supports the Watchdog Timer in the NRF5x series.
 */
-/*
- * This file is part of the libopencm3 project.
- *
- * Copyright (C) 2018 Gerrit Maus <funk@maus.xyz>
- * Copyright (C) 2018 Luong Le <novercy@live.com>
- *
- * This library is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library.  If not, see <http://www.gnu.org/licenses/>.
- */
 
 /**@{*/
 
@@ -245,28 +224,6 @@ void clock_lfclk_source(char source)
 	if(source & RC){CLOCK_LFCLKSRC |= CLOCK_LFCLKSRC_SRC_RC;}
 	else if(source & XTAL){CLOCK_LFCLKSRC |= CLOCK_LFCLKSRC_SRC_XTAL;}
 	else if(source & SYNTH){CLOCK_LFCLKSRC |= CLOCK_LFCLKSRC_SRC_SYNTH;}
-}
-
-/*---------------------------------------------------------------------------*/
-/** @brief Clock Enable bypass of LFCLK with external source.
-
-If Bypass enabled, LFCLK crystal oscillator will use rail-to-rail external
-source
-*/
-
-void clock_lfclk_extsource_bypass(void)
-{
-	CLOCK_LFCLKSRC |= CLOCK_LFCLKSRC_BYPASS_ENABLED;
-}
-
-/*---------------------------------------------------------------------------*/
-/** @brief Clock Enable LFCLK external source.
-
-*/
-
-void clock_lfclk_extsource_enable(void)
-{
-	CLOCK_LFCLKSRC |= CLOCK_LFCLKSRC_EXTERNAL_ENABLED;
 }
 
 

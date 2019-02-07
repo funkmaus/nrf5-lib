@@ -1,26 +1,6 @@
 /** @addtogroup rng_defines
- *
  * @author @htmlonly &copy; @endhtmlonly 2018
  * Gerrit Maus <funk@maus.xyz>, Luong Le <novercy@live.com>
- *
- */
-/*
- * This file is part of the libopencm3 project.
- *
- * Copyright (C) 2018 Gerrit Maus <funk@maus.xyz>, Luong Le <novercy@live.com>
- *
- * This library is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 /* THIS FILE SHOULD NOT BE INCLUDED DIRECTLY, BUT ONLY VIA RNG.H
@@ -57,9 +37,7 @@ specific memorymap.h header before including this header file.*/
 /** @defgroup rng_shorts Set shortcuts between VALRDY event and STOP task
 @ingroup rng_defines
 @{*/
-#define RNG_SHORTS_VALRDY_STOP_Disabled             (0 << 0)
 #define RNG_SHORTS_VALRDY_STOP_DISABLED             (0 << 0)
-#define RNG_SHORTS_VALRDY_STOP_Enabled              (1 << 0)
 #define RNG_SHORTS_VALRDY_STOP_ENABLED              (1 << 0)
 /**@}*/
 
@@ -67,11 +45,8 @@ specific memorymap.h header before including this header file.*/
 /** @defgroup rng_intenset Enable interrupt sources (atomically)
 @ingroup rng_defines
 @{*/
-#define RNG_INTENSET_VALRDY_Set                     (1 << 0)
 #define RNG_INTENSET_VALRDY_SET                     (1 << 0)
-#define RNG_INTENSET_VALRDY_Enabled                 (1 << 0)
 #define RNG_INTENSET_VALRDY_ENABLED                 (1 << 0)
-#define RNG_INTENSET_VALRDY_Disabled                (0 << 0)
 #define RNG_INTENSET_VALRDY_DISABLED                (0 << 0)
 /**@}*/
 
@@ -79,11 +54,8 @@ specific memorymap.h header before including this header file.*/
 /** @defgroup rng_intenclr Disable interrupt sources (atomically)
 @ingroup rng_defines
 @{*/
-#define RNG_INTENCLR_VALRDY_Clear                   (1 << 0)
 #define RNG_INTENCLR_VALRDY_CLEAR                   (1 << 0)
-#define RNG_INTENCLR_VALRDY_Enabled                 (1 << 0)
 #define RNG_INTENCLR_VALRDY_ENABLED                 (1 << 0)
-#define RNG_INTENCLR_VALRDY_Disabled                (0 << 0)
 #define RNG_INTENCLR_VALRDY_DISABLED                (0 << 0)
 /**@}*/
 
@@ -91,9 +63,7 @@ specific memorymap.h header before including this header file.*/
 /** @defgroup rng_config Enable or disable bias correction
 @ingroup rng_defines
 @{*/
-#define RNG_CONFIG_DERCEN_Enabled                   (1 << 0)
 #define RNG_CONFIG_DERCEN_ENABLED                   (1 << 0)
-#define RNG_CONFIG_DERCEN_Disabled                  (0 << 0)
 #define RNG_CONFIG_DERCEN_DISABLED                  (0 << 0)
 /**@}*/
 

@@ -1,32 +1,8 @@
 /** @addtogroup radio_file
-
 @author @htmlonly &copy; @endhtmlonly 2018 
-Gerrit Maus <funk@maus.xyz>
-Luong Le <novercy@live.com>
-
-This library supports the RADIO in the NRF52 series.
-
+Gerrit Maus <funk@maus.xyz>, Luong Le <novercy@live.com>
+This library supports the Watchdog Timer in the NRF5x series.
 */
-
-/*
- * This file is part of the libopencm3 project.
- *
- * Copyright (C) 2018 Gerrit Maus <funk@maus.xyz>
- * Copyright (C) 2018 Luong Le <novercy@live.com>
- *
- * This library is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library.  If not, see <http://www.gnu.org/licenses/>.
- */
 
 /**@{*/
 
@@ -475,8 +451,6 @@ bool radio_get_event(char event)
 	else if(event & DEVMISS){return (RADIO_EVENTS_DEVMISS != 0);}
 	else if(event & RSSIEND){return (RADIO_EVENTS_RSSIEND != 0);}
 	else if(event & BCMATCH){return (RADIO_EVENTS_BCMATCH != 0);}
-	else if(event & CRCOK){return (RADIO_EVENTS_CRCOK != 0);}
-	else if(event & CRCERROR){return (RADIO_EVENTS_CRCERROR != 0);}
 	else {return false;}
 }
 
@@ -568,28 +542,6 @@ void radio_crc(uint8_t len, uint32_t skipaddr, uint32_t crcpoly,
 	radio_crc_config(len, skipaddr);
 	radio_crc_poly(crcpoly);
 	radio_crc_init(crcinit);
-}
-
-/*---------------------------------------------------------------------------*/
-/** @brief RADIO CRC check status
-
-Return 1 if packet received with CRC ok
-*/
-
-uint32_t radio_crc_ok(void)
-{
-	return RADIO_EVENTS_CRCOK;
-}
-
-/*---------------------------------------------------------------------------*/
-/** @brief RADIO Reset CRC check event
-
-Clear CRCOK event and ready to check CRC for the next transmission/reception
-*/
-
-void radio_crc_ok_reset(void)
-{
-	RADIO_EVENTS_CRCOK = 0;
 }
 
 

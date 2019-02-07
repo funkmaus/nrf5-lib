@@ -1,26 +1,6 @@
 /** @addtogroup timer_defines
- *
  * @author @htmlonly &copy; @endhtmlonly 2018 
  * Gerrit Maus <funk@maus.xyz>, Luong Le <novercy@live.com>
- *
- */
-/*
- * This file is part of the libopencm3 project.
- *
- * Copyright (C) 2018 Gerrit Maus <funk@maus.xyz>, Luong Le <novercy@live.com>
- *
- * This library is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 /* THIS FILE SHOULD NOT BE INCLUDED DIRECTLY, BUT ONLY VIA PWM.H
@@ -238,33 +218,19 @@ struct PWM_PSEL_TYPE{
 @ingroup pwm_defines
 @{*/
 #define PWM_INTEN_STOPPED_DISABLED                   (0 << 1)
-#define PWM_INTEN_STOPPED_Disabled                   (0 << 1)
 #define PWM_INTEN_STOPPED_ENABLED                    (1 << 1)
-#define PWM_INTEN_STOPPED_Enabled                    (1 << 1)
 #define PWM_INTEN_SEQSTARTED0_DISABLED               (0 << 2)
-#define PWM_INTEN_SEQSTARTED0_Disabled               (0 << 2)
 #define PWM_INTEN_SEQSTARTED0_ENABLED                (1 << 2)
-#define PWM_INTEN_SEQSTARTED1_Enabled                (1 << 2)
 #define PWM_INTEN_SEQSTARTED1_DISABLED               (0 << 3)
-#define PWM_INTEN_SEQSTARTED1_Disabled               (0 << 3)
 #define PWM_INTEN_SEQSTARTED1_ENABLED                (1 << 3)
-#define PWM_INTEN_SEQSTARTED0_Enabled                (1 << 3)
 #define PWM_INTEN_SEQEND0_DISABLED                   (0 << 4)
-#define PWM_INTEN_SEQEND0_Disabled                   (0 << 4)
 #define PWM_INTEN_SEQEND0_ENABLED                    (1 << 4)
-#define PWM_INTEN_SEQEND0_Enabled                    (1 << 4)
 #define PWM_INTEN_SEQEND1_DISABLED                   (0 << 5)
-#define PWM_INTEN_SEQEND1_Disabled                   (0 << 5)
 #define PWM_INTEN_SEQEND1_ENABLED                    (1 << 5)
-#define PWM_INTEN_SEQEND1_Enabled                    (1 << 5)
 #define PWM_INTEN_PWMPERIODEND_DISABLED              (0 << 6)
-#define PWM_INTEN_PWMPERIODEND_Disabled              (0 << 6)
 #define PWM_INTEN_PWMPERIODEND_ENABLED               (1 << 6)
-#define PWM_INTEN_PWMPERIODEND_Enabled               (1 << 6)
 #define PWM_INTEN_LOOPSDONE_DISABLED                 (0 << 7)
-#define PWM_INTEN_LOOPSDONE_Disabled                 (0 << 7)
 #define PWM_INTEN_LOOPSDONE_ENABLED                  (1 << 7)
-#define PWM_INTEN_LOOPSDONE_Enabled                  (1 << 7)
 /**@}*/
 
 /* --- PWM_INTENSET values ------------------------------------------------- */
@@ -272,33 +238,19 @@ struct PWM_PSEL_TYPE{
 @ingroup pwm_defines
 @{*/
 #define PWM_INTENSET_STOPPED_SET                     (1 << 1)
-#define PWM_INTENSET_STOPPED_Set                     (1 << 1)
 #define PWM_INTENSET_STOPPED_ENABLED                 (1 << 1)
-#define PWM_INTENSET_STOPPED_Enabled                 (1 << 1)
 #define PWM_INTENSET_SEQSTARTED0_SET                 (1 << 2)
-#define PWM_INTENSET_SEQSTARTED0_Set                 (1 << 2)
 #define PWM_INTENSET_SEQSTARTED0_ENABLED             (1 << 2)
-#define PWM_INTENSET_SEQSTARTED1_Enabled             (1 << 2)
 #define PWM_INTENSET_SEQSTARTED1_SET                 (1 << 3)
-#define PWM_INTENSET_SEQSTARTED1_Set                 (1 << 3)
 #define PWM_INTENSET_SEQSTARTED1_ENABLED             (1 << 3)
-#define PWM_INTENSET_SEQSTARTED0_Enabled             (1 << 3)
 #define PWM_INTENSET_SEQEND0_SET                     (1 << 4)
-#define PWM_INTENSET_SEQEND0_Set                     (1 << 4)
 #define PWM_INTENSET_SEQEND0_ENABLED                 (1 << 4)
-#define PWM_INTENSET_SEQEND0_Enabled                 (1 << 4)
 #define PWM_INTENSET_SEQEND1_SET                     (1 << 5)
-#define PWM_INTENSET_SEQEND1_Set                     (1 << 5)
 #define PWM_INTENSET_SEQEND1_ENABLED                 (1 << 5)
-#define PWM_INTENSET_SEQEND1_Enabled                 (1 << 5)
 #define PWM_INTENSET_PWMPERIODEND_SET                (1 << 6)
-#define PWM_INTENSET_PWMPERIODEND_Set                (1 << 6)
 #define PWM_INTENSET_PWMPERIODEND_ENABLED            (1 << 6)
-#define PWM_INTENSET_PWMPERIODEND_Enabled            (1 << 6)
 #define PWM_INTENSET_LOOPSDONE_SET                   (1 << 7)
-#define PWM_INTENSET_LOOPSDONE_Set                   (1 << 7)
 #define PWM_INTENSET_LOOPSDONE_ENABLED               (1 << 7)
-#define PWM_INTENSET_LOOPSDONE_Enabled               (1 << 7)
 /**@}*/
 
 /* --- PWM_INTENCLR values ------------------------------------------------- */
@@ -306,33 +258,19 @@ struct PWM_PSEL_TYPE{
 @ingroup pwm_defines
 @{*/
 #define PWM_INTENCLR_STOPPED_CLEAR                   (1 << 1)
-#define PWM_INTENCLR_STOPPED_Clear                   (1 << 1)
 #define PWM_INTENCLR_STOPPED_ENABLED                 (1 << 1)
-#define PWM_INTENCLR_STOPPED_Enabled                 (1 << 1)
 #define PWM_INTENCLR_SEQSTARTED0_CLEAR               (1 << 2)
-#define PWM_INTENCLR_SEQSTARTED0_Clear               (1 << 2)
 #define PWM_INTENCLR_SEQSTARTED0_ENABLED             (1 << 2)
-#define PWM_INTENCLR_SEQSTARTED1_Enabled             (1 << 2)
 #define PWM_INTENCLR_SEQSTARTED1_CLEAR               (1 << 3)
-#define PWM_INTENCLR_SEQSTARTED1_Clear               (1 << 3)
 #define PWM_INTENCLR_SEQSTARTED1_ENABLED             (1 << 3)
-#define PWM_INTENCLR_SEQSTARTED0_Enabled             (1 << 3)
 #define PWM_INTENCLR_SEQEND0_CLEAR                   (1 << 4)
-#define PWM_INTENCLR_SEQEND0_Clear                   (1 << 4)
 #define PWM_INTENCLR_SEQEND0_ENABLED                 (1 << 4)
-#define PWM_INTENCLR_SEQEND0_Enabled                 (1 << 4)
 #define PWM_INTENCLR_SEQEND1_CLEAR                   (1 << 5)
-#define PWM_INTENCLR_SEQEND1_Clear                   (1 << 5)
 #define PWM_INTENCLR_SEQEND1_ENABLED                 (1 << 5)
-#define PWM_INTENCLR_SEQEND1_Enabled                 (1 << 5)
 #define PWM_INTENCLR_PWMPERIODEND_CLEAR              (1 << 6)
-#define PWM_INTENCLR_PWMPERIODEND_Clear              (1 << 6)
 #define PWM_INTENCLR_PWMPERIODEND_ENABLED            (1 << 6)
-#define PWM_INTENCLR_PWMPERIODEND_Enabled            (1 << 6)
 #define PWM_INTENCLR_LOOPSDONE_CLEAR                 (1 << 7)
-#define PWM_INTENCLR_LOOPSDONE_Clear                 (1 << 7)
 #define PWM_INTENCLR_LOOPSDONE_ENABLED               (1 << 7)
-#define PWM_INTENCLR_LOOPSDONE_Enabled               (1 << 7)
 /**@}*/
 
 /* --- PWM_ENABLE values --------------------------------------------------- */
@@ -340,9 +278,7 @@ struct PWM_PSEL_TYPE{
 @ingroup pwm_defines
 @{*/
 #define PWM_ENABLE_ENABLE_DISABLED                   (0)
-#define PWM_ENABLE_ENABLE_Disabled                   (0)
 #define PWM_ENABLE_ENABLE_ENABLED                    (1)
-#define PWM_ENABLE_ENABLE_Enabled                    (1)
 /**@}*/
 
 /* --- PWM_MODE values --------------------------------------------------- */
@@ -351,10 +287,8 @@ struct PWM_PSEL_TYPE{
 @{*/
 #define MODE_UP                                      (0)
 #define PWM_MODE_UPDOWN_UP                           (0)
-#define PWM_MODE_UPDOWN_Up                           (0)
 #define MODE_UPANDDOWN                               (1)
 #define PWM_MODE_UPDOWN_UPANDDOWN                    (1)
-#define PWM_MODE_UPDOWN_UpAndDown                    (1)
 /**@}*/
 
 /* --- PWM_COUNTERTOP values ----------------------------------------------- */
@@ -392,22 +326,16 @@ struct PWM_PSEL_TYPE{
 @{*/
 #define LOAD_COMMON                                  (0)
 #define PWM_DECODER_LOAD_COMMON                      (0)
-#define PWM_DECODER_LOAD_Common                      (0)
 #define LOAD_GROUPED                                 (1)
 #define PWM_DECODER_LOAD_GROUPED                     (1)
-#define PWM_DECODER_LOAD_Grouped                     (1)
 #define LOAD_INDIVIDUAL                              (2)
 #define PWM_DECODER_LOAD_INDIVIDUAL                  (2)
-#define PWM_DECODER_LOAD_Individual                  (2)
 #define LOAD_WAVEFORM                                (3)
 #define PWM_DECODER_LOAD_WAVEFORM                    (3)
-#define PWM_DECODER_LOAD_WaveForm                    (3)
 #define MODE_REFRESHCOUNT                            (0 << 8)
 #define PWM_DECODER_MODE_REFRESHCOUNT                (0 << 8)
-#define PWM_DECODER_MODE_RefreshCount                (0 << 8)
 #define MODE_NEXTSTEP                                (1 << 8)
 #define PWM_DECODER_MODE_NEXTSTEP                    (1 << 8)
-#define PWM_DECODER_MODE_NextStep                    (1 << 8)
 /**@}*/
 
 /* --- PWM_LOOP values ----------------------------------------------------- */
@@ -416,7 +344,6 @@ struct PWM_PSEL_TYPE{
 @{*/
 #define PWM_LOOP_CNT(n)                              (n)
 #define PWM_LOOP_CNT_DISABLED                        (0)
-#define PWM_LOOP_CNT_Disabled                        (0)
 /**@}*/
 
 /* --- PWM_SEQ[x].CNT values ----------------------------------------------- */
@@ -425,11 +352,8 @@ struct PWM_PSEL_TYPE{
 @{*/
 #define PWM_SEQ_CNT_CNT(n)                           (n)
 #define PWM_SEQ_CNT_CNT_DISABLED                     (0)
-#define PWM_SEQ_CNT_CNT_Disabled                     (0)
 #define PWM_SEQ0_CNT_CNT_DISABLED                    (0)
-#define PWM_SEQ0_CNT_CNT_Disabled                    (0)
 #define PWM_SEQ1_CNT_CNT_DISABLED                    (0)
-#define PWM_SEQ1_CNT_CNT_Disabled                    (0)
 /**@}*/
 
 /* --- PWM_SEQ[x].REFRESH values ------------------------------------------- */
@@ -440,11 +364,8 @@ samples
 #define PWM_SEQ_REFRESH_CNT(n)                       (n)
 #define REFRESH_CONTINUOUS                           (0)
 #define PWM_SEQ_REFRESH_CNT_CONTINUOUS               (0)
-#define PWM_SEQ_REFRESH_CNT_Continuous               (0)
 #define PWM_SEQ0_REFRESH_CNT_CONTINUOUS              (0)
-#define PWM_SEQ0_REFRESH_CNT_Continuous              (0)
 #define PWM_SEQ1_REFRESH_CNT_CONTINUOUS              (0)
-#define PWM_SEQ1_REFRESH_CNT_Continuous              (0)
 /**@}*/
 
 /* --- PWM_SEQ[x].ENDDELAY values ------------------------------------------ */
@@ -467,25 +388,15 @@ samples
 #define CONNECT_DISCONNECTED                         (1 << 31)
 #define CONNECT_CONNECTED                            (0 << 31)
 #define PWM_PSEL_OUT_CONNECT_DISCONNECTED            (1 << 31)
-#define PWM_PSEL_OUT_CONNECT_Disconnected            (1 << 31)
 #define PWM_PSEL_OUT_CONNECT_CONNECTED               (0 << 31)
-#define PWM_PSEL_OUT_CONNECT_Connected               (0 << 31)
 #define PWM_PSEL_OUT0_CONNECT_DISCONNECTED           (1 << 31)
-#define PWM_PSEL_OUT0_CONNECT_Disconnected           (1 << 31)
 #define PWM_PSEL_OUT0_CONNECT_CONNECTED              (0 << 31)
-#define PWM_PSEL_OUT0_CONNECT_Connected              (0 << 31)
 #define PWM_PSEL_OUT1_CONNECT_DISCONNECTED           (1 << 31)
-#define PWM_PSEL_OUT1_CONNECT_Disconnected           (1 << 31)
 #define PWM_PSEL_OUT1_CONNECT_CONNECTED              (0 << 31)
-#define PWM_PSEL_OUT1_CONNECT_Connected              (0 << 31)
 #define PWM_PSEL_OUT2_CONNECT_DISCONNECTED           (1 << 31)
-#define PWM_PSEL_OUT2_CONNECT_Disconnected           (1 << 31)
 #define PWM_PSEL_OUT2_CONNECT_CONNECTED              (0 << 31)
-#define PWM_PSEL_OUT2_CONNECT_Connected              (0 << 31)
 #define PWM_PSEL_OUT3_CONNECT_DISCONNECTED           (1 << 31)
-#define PWM_PSEL_OUT3_CONNECT_Disconnected           (1 << 31)
 #define PWM_PSEL_OUT3_CONNECT_CONNECTED              (0 << 31)
-#define PWM_PSEL_OUT3_CONNECT_Connected              (0 << 31)
 /**@}*/
 
 

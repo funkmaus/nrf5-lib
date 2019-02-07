@@ -1,26 +1,6 @@
 /** @addtogroup timer_defines
- *
  * @author @htmlonly &copy; @endhtmlonly 2018 
  * Gerrit Maus <funk@maus.xyz>, Luong Le <novercy@live.com>
- *
- */
-/*
- * This file is part of the libopencm3 project.
- *
- * Copyright (C) 2018 Gerrit Maus <funk@maus.xyz>, Luong Le <novercy@live.com>
- *
- * This library is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 /* THIS FILE SHOULD NOT BE INCLUDED DIRECTLY, BUT ONLY VIA TIMER.H
@@ -175,29 +155,17 @@ specific memorymap.h header before including this header file.
 @ingroup timer_defines
 @{*/
 #define TIMER_SHORTS_COMPARE0_CLEAR_ENABLED           (1 << 0)
-#define TIMER_SHORTS_COMPARE0_CLEAR_Enabled           (1 << 0)
 #define TIMER_SHORTS_COMPARE1_CLEAR_ENABLED           (1 << 1)
-#define TIMER_SHORTS_COMPARE1_CLEAR_Enabled           (1 << 1)
 #define TIMER_SHORTS_COMPARE2_CLEAR_ENABLED           (1 << 2)
-#define TIMER_SHORTS_COMPARE2_CLEAR_Enabled           (1 << 2)
 #define TIMER_SHORTS_COMPARE3_CLEAR_ENABLED           (1 << 3)
-#define TIMER_SHORTS_COMPARE3_CLEAR_Enabled           (1 << 3)
 #define TIMER_SHORTS_COMPARE4_CLEAR_ENABLED           (1 << 4)
-#define TIMER_SHORTS_COMPARE4_CLEAR_Enabled           (1 << 4)
 #define TIMER_SHORTS_COMPARE5_CLEAR_ENABLED           (1 << 5)
-#define TIMER_SHORTS_COMPARE5_CLEAR_Enabled           (1 << 5)
 #define TIMER_SHORTS_COMPARE0_STOP_ENABLED            (1 << 8)
-#define TIMER_SHORTS_COMPARE0_STOP_Enabled            (1 << 8)
 #define TIMER_SHORTS_COMPARE1_STOP_ENABLED            (1 << 9)
-#define TIMER_SHORTS_COMPARE1_STOP_Enabled            (1 << 9)
 #define TIMER_SHORTS_COMPARE2_STOP_ENABLED            (1 << 10)
-#define TIMER_SHORTS_COMPARE2_STOP_Enabled            (1 << 10)
 #define TIMER_SHORTS_COMPARE3_STOP_ENABLED            (1 << 11)
-#define TIMER_SHORTS_COMPARE3_STOP_Enabled            (1 << 11)
 #define TIMER_SHORTS_COMPARE4_STOP_ENABLED            (1 << 12)
-#define TIMER_SHORTS_COMPARE4_STOP_Enabled            (1 << 12)
 #define TIMER_SHORTS_COMPARE5_STOP_ENABLED            (1 << 13)
-#define TIMER_SHORTS_COMPARE5_STOP_Enabled            (1 << 13)
 /**@}*/
 
 /* --- TIMER_INTENSET values ----------------------------------------------- */
@@ -205,29 +173,17 @@ specific memorymap.h header before including this header file.
 @ingroup timer_defines
 @{*/
 #define TIMER_INTENSET_COMPARE0_ENABLED               (1 << 16)
-#define TIMER_INTENSET_COMPARE0_Enabled               (1 << 16)
 #define TIMER_INTENSET_COMPARE0_SET                   (1 << 16)
-#define TIMER_INTENSET_COMPARE0_Set                   (1 << 16)
 #define TIMER_INTENSET_COMPARE1_ENABLED               (1 << 17)
-#define TIMER_INTENSET_COMPARE1_Enabled               (1 << 17)
 #define TIMER_INTENSET_COMPARE1_SET                   (1 << 17)
-#define TIMER_INTENSET_COMPARE1_Set                   (1 << 17)
 #define TIMER_INTENSET_COMPARE2_ENABLED               (1 << 18)
-#define TIMER_INTENSET_COMPARE2_Enabled               (1 << 18)
 #define TIMER_INTENSET_COMPARE2_SET                   (1 << 18)
-#define TIMER_INTENSET_COMPARE2_Set                   (1 << 18)
 #define TIMER_INTENSET_COMPARE3_ENABLED               (1 << 19)
-#define TIMER_INTENSET_COMPARE3_Enabled               (1 << 19)
 #define TIMER_INTENSET_COMPARE3_SET                   (1 << 19)
-#define TIMER_INTENSET_COMPARE3_Set                   (1 << 19)
 #define TIMER_INTENSET_COMPARE4_ENABLED               (1 << 20)
-#define TIMER_INTENSET_COMPARE4_Enabled               (1 << 20)
 #define TIMER_INTENSET_COMPARE4_SET                   (1 << 20)
-#define TIMER_INTENSET_COMPARE4_Set                   (1 << 20)
 #define TIMER_INTENSET_COMPARE5_ENABLED               (1 << 21)
-#define TIMER_INTENSET_COMPARE5_Enabled               (1 << 21)
 #define TIMER_INTENSET_COMPARE5_SET                   (1 << 21)
-#define TIMER_INTENSET_COMPARE5_Set                   (1 << 21)
 /**@}*/
 
 /* --- TIMER_INTENCLR values ----------------------------------------------- */
@@ -235,29 +191,17 @@ specific memorymap.h header before including this header file.
 @ingroup timer_defines
 @{*/
 #define TIMER_INTENCLR_COMPARE0_ENABLED               (1 << 16)
-#define TIMER_INTENCLR_COMPARE0_Enabled               (1 << 16)
 #define TIMER_INTENCLR_COMPARE0_CLEAR                 (1 << 16)
-#define TIMER_INTENCLR_COMPARE0_Clear                 (1 << 16)
 #define TIMER_INTENCLR_COMPARE1_ENABLED               (1 << 17)
-#define TIMER_INTENCLR_COMPARE1_Enabled               (1 << 17)
 #define TIMER_INTENCLR_COMPARE1_CLEAR                 (1 << 17)
-#define TIMER_INTENCLR_COMPARE1_Clear                 (1 << 17)
 #define TIMER_INTENCLR_COMPARE2_ENABLED               (1 << 18)
-#define TIMER_INTENCLR_COMPARE2_Enabled               (1 << 18)
 #define TIMER_INTENCLR_COMPARE2_CLEAR                 (1 << 18)
-#define TIMER_INTENCLR_COMPARE2_Clear                 (1 << 18)
 #define TIMER_INTENCLR_COMPARE3_ENABLED               (1 << 19)
-#define TIMER_INTENCLR_COMPARE3_Enabled               (1 << 19)
 #define TIMER_INTENCLR_COMPARE3_CLEAR                 (1 << 19)
-#define TIMER_INTENCLR_COMPARE3_Clear                 (1 << 19)
 #define TIMER_INTENCLR_COMPARE4_ENABLED               (1 << 20)
-#define TIMER_INTENCLR_COMPARE4_Enabled               (1 << 20)
 #define TIMER_INTENCLR_COMPARE4_CLEAR                 (1 << 20)
-#define TIMER_INTENCLR_COMPARE4_Clear                 (1 << 20)
 #define TIMER_INTENCLR_COMPARE5_ENABLED               (1 << 21)
-#define TIMER_INTENCLR_COMPARE5_Enabled               (1 << 21)
 #define TIMER_INTENCLR_COMPARE5_CLEAR                 (1 << 21)
-#define TIMER_INTENCLR_COMPARE5_Clear                 (1 << 21)
 /**@}*/
 
 /* --- TIMER_MODE values --------------------------------------------------- */
@@ -277,23 +221,13 @@ specific memorymap.h header before including this header file.
 @ingroup timer_defines
 @{*/
 #define BITMODE_8                               (1)
-#define TIMER_BITMODE_BITMODE_8                 (1)
-#define TIMER_BITMODE_BITMODE_8BIT              (1)
-#define TIMER_BITMODE_BITMODE_8Bit              (1)
 #define TIMER_BITMODE_BITMODE_08BIT             (1)
-#define TIMER_BITMODE_BITMODE_08Bit             (1)
 #define BITMODE_16                              (0)
-#define TIMER_BITMODE_BITMODE_16                (0)
 #define TIMER_BITMODE_BITMODE_16BIT             (0)
-#define TIMER_BITMODE_BITMODE_16Bit             (0)
 #define BITMODE_24                              (2)
-#define TIMER_BITMODE_BITMODE_24                (2)
 #define TIMER_BITMODE_BITMODE_24BIT             (2)
-#define TIMER_BITMODE_BITMODE_24Bit             (2)
 #define BITMODE_32                              (3)
-#define TIMER_BITMODE_BITMODE_32                (3)
 #define TIMER_BITMODE_BITMODE_32BIT             (3)
-#define TIMER_BITMODE_BITMODE_32Bit             (3)
 /**@}*/
 
 /* --- TIMER_PRESCALER values ---------------------------------------------- */

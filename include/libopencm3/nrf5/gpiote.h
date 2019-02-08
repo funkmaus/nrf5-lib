@@ -4,12 +4,10 @@
 #include <libopencm3/nrf5/memorymap.h>
 
 #if defined(NRF52)
-#       include <libopencm3/nrf5/2/ppi.h>
-/*
+#       include <libopencm3/nrf5/2/gpiote.h>
 #elif defined(NRF51)
-#       include <libopencm3/nrf5/1/ppi.h>
-*/
+#       include <libopencm3/nrf5/1/gpiote.h>
 #else
-#       error "nrf5 family not defined."
+#       error "nrf family not defined."
 #endif
 

@@ -25,7 +25,7 @@ specific memorymap.h header before including this header file.*/
  * @ingroup uarte_defines
  * @brief UARTE Registers
 @{*/
-/* --------------------- UARTE registers for NRF52 ------------------------- */
+/* --------------------- UARTE registers for NRF5x ------------------------- */
 
 /* Tasks Registers */
 #define UART_TASKS_STARTRX(uart_base)          MMIO32((uart_base) + 0x000)

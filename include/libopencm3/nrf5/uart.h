@@ -5,10 +5,8 @@
 
 #if defined(NRF52)
 #       include <libopencm3/nrf5/2/uart.h>
-/*
 #elif defined(NRF51)
 #       include <libopencm3/nrf5/1/uart.h>
-*/
 #else
 #       error "nrf family not defined."
 #endif

@@ -40,12 +40,13 @@ TGT_CFLAGS	+= $(STANDARD_FLAGS)
 ARFLAGS		= rcs
 
 OBJS		= gpio.o uart.o uarte.o timer.o clock.o spim.o radio.o saadc.o \
-              ppi.o pwm.o temp.o rng.o power.o wdt.o nvmc.o gpiote.o
+              ppi.o pwm.o temp.o rng.o power.o wdt.o nvmc.o gpiote.o spis.o
 
 OBJS            += gpio_common.o uart_common.o uarte_common.o timer_common.o \
 				   clock_common.o spim_common.o radio_common.o saadc_common.o \
 				   ppi_common.o pwm_common.o temp_common.o rng_common.o \
-				   power_common.o wdt_common.o nvmc_common.o gpiote_common.o
+				   power_common.o wdt_common.o nvmc_common.o gpiote_common.o \
+				   spis_common.o
 
 VPATH += ../../usb:../:../../cm3:../common
 VPATH += ../../ethernet

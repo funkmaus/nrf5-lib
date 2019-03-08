@@ -25,7 +25,7 @@ specific memorymap.h header before including this header file.*/
  * @ingroup uart_defines
  * @brief UART Registers
 @{*/
-/* --------------------- UART registers for NRF52 -------------------------- */
+/* --------------------- UART registers for NRF5x -------------------------- */
 
 /* Tasks Registers */
 #define UART_TASKS_STARTRX(uart_base)        MMIO32((uart_base) + 0x000)
@@ -63,9 +63,6 @@ specific memorymap.h header before including this header file.*/
 #define UART0_EVENTS_RXTO                    MMIO32((UART0) + 0x144)
 
 /* Registers */
-#define UART_SHORTS(uart_base)               MMIO32((uart_base) + 0x200)
-#define UART0_SHORTS                         MMIO32((UART0) + 0x200)
-
 #define UART_INTENSET(uart_base)             MMIO32((uart_base) + 0x304)
 #define UART0_INTENSET                       MMIO32((UART0) + 0x304)
 
@@ -103,54 +100,50 @@ specific memorymap.h header before including this header file.*/
 #define UART0_CONFIG                         MMIO32((UART0) + 0x56C)
 /**@}*/
 
-/* --- UART_SHORTS values -------------------------------------------------- */
-/** @defgroup uart_shorts Set shortcut between ENDRX-STARTRX and ENDRX-STOPRX
-@ingroup uart_defines
-@{*/
-#define UART_SHORTS_CTS_STARTRX              (1 << 3)
-#define UART_SHORTS_NCTS_STOPRX              (1 << 4)
-/**@}*/
-
 /* --- UART_INTENSET values ------------------------------------------------ */
 /** @defgroup uart_intenset Enable interrupt
 @ingroup uart_defines
 @{*/
-#define UART_INTENSET_CTS_ENABLE             (1 << 0)
-#define UART_INTENSET_NCTS_ENABLE            (1 << 1)    
-#define UART_INTENSET_RXDRDY_ENABLE          (1 << 2)    
-#define UART_INTENSET_TXDRDY_ENABLE          (1 << 7)    
-#define UART_INTENSET_ERROR_ENABLE           (1 << 9)    
-#define UART_INTENSET_RXTO_ENABLE            (1 << 17)
+#define UART_INTENSET_CTS_SET             (1 << 0)
+#define UART_INTENSET_NCTS_SET            (1 << 1)    
+#define UART_INTENSET_RXDRDY_SET          (1 << 2)    
+#define UART_INTENSET_TXDRDY_SET          (1 << 7)    
+#define UART_INTENSET_ERROR_SET           (1 << 9)    
+#define UART_INTENSET_RXTO_SET            (1 << 17)
 /**@}*/
 
 /* --- UART_INTENCLR values ------------------------------------------------ */
 /** @defgroup uart_intenclr Disable interrupt
 @ingroup uart_defines
 @{*/
-#define UART_INTENCLR_CTS_ENABLE             (1 << 0)
-#define UART_INTENCLR_NCTS_ENABLE            (1 << 1)    
-#define UART_INTENCLR_NXDRDY_ENABLE          (1 << 2)    
-#define UART_INTENCLR_TXDRDY_ENABLE          (1 << 7)    
-#define UART_INTENCLR_ERROR_ENABLE           (1 << 9)    
-#define UART_INTENCLR_RXTO_ENABLE            (1 << 17)
+#define UART_INTENCLR_CTS_CLEAR             (1 << 0)
+#define UART_INTENCLR_NCTS_CLEAR            (1 << 1)    
+#define UART_INTENCLR_NXDRDY_CLEAR          (1 << 2)    
+#define UART_INTENCLR_TXDRDY_CLEAR          (1 << 7)    
+#define UART_INTENCLR_ERROR_CLEAR           (1 << 9)    
+#define UART_INTENCLR_RXTO_CLEAR            (1 << 17)
 /**@}*/
 
 /* --- UART_ERRORSRC values ------------------------------------------------ */
 /** @defgroup uart_errorsrc Error source
 @ingroup uart_defines
 @{*/
-#define UART_ERRORSRC_OVERRUN                (1 << 0)
-#define UART_ERRORSRC_PARITY                 (1 << 1)
-#define UART_ERRORSRC_FRAMING                (1 << 2)
-#define UART_ERRORSRC_BREAK                  (1 << 3)
+#define UART_ERRORSRC_OVERRUN_NOTPRESENT           (0 << 0)
+#define UART_ERRORSRC_OVERRUN_PRESENT              (1 << 0)
+#define UART_ERRORSRC_PARITY_NOTPRESENT            (0 << 1)
+#define UART_ERRORSRC_PARITY_PRESENT               (1 << 1)
+#define UART_ERRORSRC_FRAMING_NOTPRESENT           (0 << 2)
+#define UART_ERRORSRC_FRAMING_PRESENT              (1 << 2)
+#define UART_ERRORSRC_BREAK_NOTPRESENT             (0 << 3)
+#define UART_ERRORSRC_BREAK_PRESENT                (1 << 3)
 /**@}*/
 
 /* --- UART_ENABLE values -------------------------------------------------- */
 /** @defgroup uart_enable Enable UART
 @ingroup uart_defines
 @{*/
-#define UART_ENABLE_DISABLE                  (0)
-#define UART_ENABLE_ENABLE                   (4)
+#define UART_ENABLE_ENABLE_DISABLED                  (0)
+#define UART_ENABLE_ENABLE_ENABLED                   (4)
 /**@}*/
 
 /* --- UART_PSELRTS values ------------------------------------------------- */
@@ -158,7 +151,7 @@ specific memorymap.h header before including this header file.*/
 @ingroup uart_defines
 @{*/
 #define UART_PSELRTS_PIN(n)                  (n)
-#define UART_PSELRTS_DISCONNECT              0xffffffff
+#define UART_PSELRTS_DISCONNECTED            0xffffffff
 /**@}*/
 
 /* --- UART_PSELTXD values ------------------------------------------------- */
@@ -166,7 +159,7 @@ specific memorymap.h header before including this header file.*/
 @ingroup uart_defines
 @{*/
 #define UART_PSELTXD_PIN(n)                  (n)
-#define UART_PSELTXD_DISCONNECT              0xffffffff
+#define UART_PSELTXD_DISCONNECTED            0xffffffff
 /**@}*/
 
 /* --- UART_PSELCTS values ------------------------------------------------- */
@@ -174,7 +167,7 @@ specific memorymap.h header before including this header file.*/
 @ingroup uart_defines
 @{*/
 #define UART_PSELCTS_PIN(n)                  (n)
-#define UART_PSELCTS_DISCONNECT              0xffffffff
+#define UART_PSELCTS_DISCONNECTED            0xffffffff
 /**@}*/
 
 /* --- UART_PSELRXD values ------------------------------------------------- */
@@ -182,39 +175,38 @@ specific memorymap.h header before including this header file.*/
 @ingroup uart_defines
 @{*/
 #define UART_PSELRXD_PIN(n)                  (n)
-#define UART_PSELRXD_DISCONNECT              0xffffffff
+#define UART_PSELRXD_DISCONNECTED            0xffffffff
 /**@}*/
 
 /* --- UART_BAUDRATE values ------------------------------------------------ */
 /** @defgroup uart_baudrate Set baud rate for UART
 @ingroup uart_defines
 @{*/
-#define UART_BAUDRATE_BAUDRATE_1200          0x0004f000    
-#define UART_BAUDRATE_BAUDRATE_2400          0x0009d000    
-#define UART_BAUDRATE_BAUDRATE_4800          0x0013b000    
-#define UART_BAUDRATE_BAUDRATE_9600          0x00275000    
-#define UART_BAUDRATE_BAUDRATE_14400         0x003b0000    
-#define UART_BAUDRATE_BAUDRATE_19200         0x004ea000    
-#define UART_BAUDRATE_BAUDRATE_28800         0x0075f000    
-#define UART_BAUDRATE_BAUDRATE_38400         0x009d5000    
-#define UART_BAUDRATE_BAUDRATE_57600         0x00ebf000    
-#define UART_BAUDRATE_BAUDRATE_76800         0x013a9000    
-#define UART_BAUDRATE_BAUDRATE_115200        0x01d7e000    
-#define UART_BAUDRATE_BAUDRATE_230400        0x03afb000    
-#define UART_BAUDRATE_BAUDRATE_250000        0x04000000    
-#define UART_BAUDRATE_BAUDRATE_460800        0x075f7000    
-#define UART_BAUDRATE_BAUDRATE_921600        0x0ebed000    
-#define UART_BAUDRATE_BAUDRATE_1M            0x10000000
+#define UART_BAUDRATE_BAUDRATE_BAUD1200          0x0004f000    
+#define UART_BAUDRATE_BAUDRATE_BAUD2400          0x0009d000    
+#define UART_BAUDRATE_BAUDRATE_BAUD4800          0x0013b000    
+#define UART_BAUDRATE_BAUDRATE_BAUD9600          0x00275000    
+#define UART_BAUDRATE_BAUDRATE_BAUD14400         0x003b0000    
+#define UART_BAUDRATE_BAUDRATE_BAUD19200         0x004ea000    
+#define UART_BAUDRATE_BAUDRATE_BAUD28800         0x0075f000    
+#define UART_BAUDRATE_BAUDRATE_BAUD38400         0x009d5000    
+#define UART_BAUDRATE_BAUDRATE_BAUD57600         0x00ebf000    
+#define UART_BAUDRATE_BAUDRATE_BAUD76800         0x013a9000    
+#define UART_BAUDRATE_BAUDRATE_BAUD115200        0x01d7e000    
+#define UART_BAUDRATE_BAUDRATE_BAUD230400        0x03afb000    
+#define UART_BAUDRATE_BAUDRATE_BAUD250000        0x04000000    
+#define UART_BAUDRATE_BAUDRATE_BAUD460800        0x075f7000    
+#define UART_BAUDRATE_BAUDRATE_BAUD1M            0x10000000
 /**@}*/
 
 /* --- UART_CONFIG values -------------------------------------------------- */
 /** @defgroup uart_config Configurate parity and hardware flow control
 @ingroup uart_defines
 @{*/
-#define UART_CONFIG_HWFC_ENABLE              1  
-#define UART_CONFIG_HWFC_DISABLE             0  
-#define UART_CONFIG_PARITY_EXCLUDE           (0x0 << 1)
-#define UART_CONFIG_PARITY_INCLUDE           (0x7 << 1)
+#define UART_CONFIG_HWFC_ENABLED              1  
+#define UART_CONFIG_HWFC_DISABLED             0  
+#define UART_CONFIG_PARITY_EXCLUDED           (0x0 << 1)
+#define UART_CONFIG_PARITY_INCLUDED           (0x7 << 1)
 /**@}*/
 
 

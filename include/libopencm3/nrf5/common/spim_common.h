@@ -231,15 +231,15 @@ struct SPIM_TXD_TYPE{
 @ingroup spim_defines
 @{*/
 #define SPIM_INTENCLR_STOPPED_CLR            (1 << 1)
-#define SPIM_INTENCLR_ENDRX_CLR               (1 << 4)
-#define SPIM_INTENCLR_END_CLR                 (1 << 6)
-#define SPIM_INTENCLR_ENDTX_CLR               (1 << 8)
-#define SPIM_INTENCLR_STARTED_CLR             (1 << 19)
-#define SPIM_INTENCLR_STOPPED_CLEAR            (1 << 1)
-#define SPIM_INTENCLR_ENDRX_CLEAR               (1 << 4)
-#define SPIM_INTENCLR_END_CLEAR                 (1 << 6)
-#define SPIM_INTENCLR_ENDTX_CLEAR               (1 << 8)
-#define SPIM_INTENCLR_STARTED_CLEAR             (1 << 19)
+#define SPIM_INTENCLR_ENDRX_CLR              (1 << 4)
+#define SPIM_INTENCLR_END_CLR                (1 << 6)
+#define SPIM_INTENCLR_ENDTX_CLR              (1 << 8)
+#define SPIM_INTENCLR_STARTED_CLR            (1 << 19)
+#define SPIM_INTENCLR_STOPPED_CLEAR          (1 << 1)
+#define SPIM_INTENCLR_ENDRX_CLEAR            (1 << 4)
+#define SPIM_INTENCLR_END_CLEAR              (1 << 6)
+#define SPIM_INTENCLR_ENDTX_CLEAR            (1 << 8)
+#define SPIM_INTENCLR_STARTED_CLEAR          (1 << 19)
 /**@}*/
 
 /* --- SPIM_ENABLE values -------------------------------------------------- */
@@ -255,8 +255,8 @@ struct SPIM_TXD_TYPE{
 @ingroup spim_defines
 @{*/
 #define SPIM_PSEL_SCK_PIN(n)                     (n)
-#define SPIM_PSEL_SCK_CONNECT_CONNECTED          (0)
-#define SPIM_PSEL_SCK_CONNECT_DISCONNECTED       (1)
+#define SPIM_PSEL_SCK_CONNECT_CONNECTED          (0 << 31)
+#define SPIM_PSEL_SCK_CONNECT_DISCONNECTED       (1 << 31)
 /**@}*/
 
 /* --- SPIM_PSEL.MOSI values ----------------------------------------------- */
@@ -264,8 +264,8 @@ struct SPIM_TXD_TYPE{
 @ingroup spim_defines
 @{*/
 #define SPIM_PSEL_MOSI_PIN(n)                    (n)
-#define SPIM_PSEL_MOSI_CONNECT_CONNECTED         (0)
-#define SPIM_PSEL_MOSI_CONNECT_DISCONNECTED      (1)
+#define SPIM_PSEL_MOSI_CONNECT_CONNECTED         (0 << 31)
+#define SPIM_PSEL_MOSI_CONNECT_DISCONNECTED      (1 << 31)
 /**@}*/
 
 /* --- SPIM_PSEL.MISO values ----------------------------------------------- */
@@ -273,8 +273,8 @@ struct SPIM_TXD_TYPE{
 @ingroup spim_defines
 @{*/
 #define SPIM_PSEL_MISO_PIN(n)                    (n)
-#define SPIM_PSEL_MISO_CONNECT_CONNECTED         (0)
-#define SPIM_PSEL_MISO_CONNECT_DISCONNECTED      (1)
+#define SPIM_PSEL_MISO_CONNECT_CONNECTED         (0 << 31)
+#define SPIM_PSEL_MISO_CONNECT_DISCONNECTED      (1 << 31)
 /**@}*/
 
 /* --- SPIM_FREQUENCY values ----------------------------------------------- */

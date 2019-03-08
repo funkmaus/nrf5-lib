@@ -21,6 +21,7 @@ LGPL License Terms @ref lgpl_license
 #define RADIO_OVERRIDE2                  MMIO32((RADIO_BASE) + 0x72C)
 #define RADIO_OVERRIDE3                  MMIO32((RADIO_BASE) + 0x730)
 #define RADIO_OVERRIDE4                  MMIO32((RADIO_BASE) + 0x734)
+/**@}*/
 
 #endif
 
